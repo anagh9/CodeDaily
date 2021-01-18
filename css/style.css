@@ -111,12 +111,6 @@ h1 {
 body {
   font-size: 20px;
   font-family: lato, sans-serif;
-  /* background-color: #FFF6E7; */
-  /* background-color: #A6CEE3 */
-  /* background-image: linear-gradient(to right, #BEBADA, #A6CEE3); */
-  /* background-image: linear-gradient(to right, #A6CEE3,#E6F5D0 ); */
-  /* background-image: linear-gradient(to right,#FFFFBF, #E6F598); */
-  /* background-color: #bfcae5; */
 }
 
 footer {
@@ -142,7 +136,7 @@ a:hover {
 
 #wrapperbox {
   background: #fcf8e3;
-  z-index: 1; /* prevent shadows falling behind containers with backgrounds */
+  z-index: 1; 
   overflow: hidden;
   margin: 0 auto;
   padding: 40px;
@@ -157,4 +151,68 @@ a:hover {
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  .title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 22%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 50%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  #wrapperbox {
+    width: 50vh;
+    padding-right: 10px;
+  }
+  .container {
+    display: block;
+    width: 100%;
+    padding-left: 1px;
+    padding-right: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  pre {
+    width: min-content;
+    display: flex;
+    font-size: 10px;
+  }
 }
