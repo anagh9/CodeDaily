@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <title>DailyCoding</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Simonetta:wght@900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      rel="stylesheet"
+    />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="x-icon" href="./images/favicon.ico" />
+  </head>
+
+  <body>
+    <div data-role="content" id="wrapperbox">
+      <header class="header text-center">
+        <h1 class="title">1. Sum Of Two Linked List</h1>
+        <p class="gh-btns">
+          <a href="../index.html">Back to Homepage</a> |
+          <a href="./codelist.html">Back to Code List</a>
+        </p>
+      </header>
+
+      <a href="https://leetcode.com/problems/add-two-numbers/"
+        >Link Of Problem</a
+      >
+
+      <div class="container">
+        <pre class="brush: cpp"><code class="language-cpp">
+class Node {
+public:
+	int data;
+	Node*next;
+};
+
+Node* newNode(int data) {
+	Node* neWNode = new Node();
+	neWNode->data = data;
+	neWNode->next = NULL;
+	return neWNode;
+}
+
+void push(Node** headRef, int newData) {
+	Node* neWNode = newNode(newData);
+	neWNode->next = (*headRef);
+	(*headRef) = neWNode;
+}
+
+Node* addTwoList(Node* first, Node* second) {
+	Node* res = NULL;
+	Node* temp, *prev = NULL;
+	int carry = 0, sum;
+
+	while (first != NULL || second != NULL) {
+		sum = carry + (first ? first ->data : 0) + (second ? second->data : 0);
+		carry = (sum >= 10) ? 1 : 0;
+		sum = sum % 10;
+		temp = newNode(sum);
+
+		if (res == NULL)
+			res = temp;
+		else
+			prev->next = temp;
+
+		prev = temp;
+
+		if (first)
+			first = first ->next;
+		if (second)
+			second = second ->next;
+	}
+	if (carry > 0)
+		temp->next = newNode(carry);
+	//
+	return res;
+}
+
+
+void printList(Node * node) {
+	while (node != NULL) {
+		cout << node->data << " ";
+		node = node ->next;
+	}
+	cout << endl;
+}
+
+
+int main() {
+	Node* res = NULL;
+	Node* first = NULL;
+	Node* second = NULL;
+
+// First List => 7 -> 5-> 9-> 4-> 6
+	push(&first, 6);
+	push(&first, 4);
+	push(&first, 9);
+	push(&first, 5);
+	push(&first, 7);
+	printList(first);
+
+// Second List => 8-> 4
+	push(&second , 4);
+	push(&second, 8);
+
+	printList(second);
+
+	res = addTwoList(first, second);
+
+	cout << "Resultant List :";
+	printList(res);
+
+	return 0;
+}
+
+         </code></pre>
+      </div>
+    </div>
+  </body>
+</html>
