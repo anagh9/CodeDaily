@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <title>DailyCoding</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Simonetta:wght@900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      rel="stylesheet"
+    />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="x-icon" href="./images/favicon.ico" />
+  </head>
+
+  <body>
+    <div data-role="content" id="wrapperbox">
+      <header class="header text-center">
+        <h1 class="title">2. The 3n + 1 Problem</h1>
+        <p class="gh-btns">
+          <a href="../index.html">Back to Homepage</a> |
+          <a href="./codelist.html">Back to Code List</a>
+        </p>
+      </header>
+
+      <a href="#">Link Of Problem</a>
+
+      <div class="container">
+        <pre class="brush: cpp"><code class="language-cpp">
+
+
+/* Unordered Map Solution  */
+
+void MostFrequent(vector<int> v){
+    int n = v.size();
+    unordered_map<int,int>M;
+    for(int i=0;i<n;i++){
+        M[v[i]]++;
+    }
+    int maxCount = 0, res =-1;
+    for(auto &i:M){
+        if(i.second > maxCount){
+            res = i.first;
+            maxCount = i.second;
+        }
+    }
+    cout<< res<<endl;
+}
+
+
+int main()
+{
+   map<int,int>m;
+   int n,i,p=0,q;
+   cin>>n;
+   int a[n];
+   for(i=0;i<n;i++)
+   {
+       cin>>a[i];
+       m[a[i]]++;     
+   }
+  for(auto &e:m)    //map traversal
+  {
+      if(e.second>p)
+      {
+          p=e.second;
+          q=e.first;
+      }
+  }
+  cout<<q;
+}
+         </code></pre>
+      </div>
+    </div>
+  </body>
+</html>
