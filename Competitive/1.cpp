@@ -1,18 +1,17 @@
 #include<bits/stdc++.h>
 #define ll long long
-#define vi  vector<int>
-#define F first
-#define S second
-#define PB push_back
-#define MP make_pair
+#define Ints vector<int>
+#define pb push_back
+#define mp make_pair
 #define fo(i,a,b) for(int i = a; i <b; i++)
 #define fv(it,a)  for(auto it = a.begin() ; it!=a.end(); it++)
+#define deb(x) cout<<#x<<" "<<x<<endl;
 #define PI 3.1415926535897932384626
 using namespace std;
 const int mod = 1000000007;
 const int N = 3e5, M = N;
 
-void c_p_c()
+void FastI()
 {
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #ifndef ONLINE_JUDGE
@@ -22,16 +21,14 @@ void c_p_c()
 }
 
 void solve() {
-	char c[] = {'*', '3', '*', '1'};
-	int n = sizeof(c) / sizeof(c[0]);
-	sort(c, c + n);
-
-	fo(i, 0, n)	cout << c[i] << " ";
+	int n;
+	cin >> n;
+	cout << n;
 
 }
 
 int main() {
-	c_p_c();
+	FastI();
 	int t;
 	cin >> t;
 	while (t--) {
@@ -39,12 +36,3 @@ int main() {
 	}
 	return 0;
 }
-/*
-3
-5 2
-*a*b*
-5 2
-*a**b
-5 1
-abcde
-*/
