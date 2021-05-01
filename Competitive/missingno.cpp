@@ -1,5 +1,3 @@
-//CSES ProblemSet - Weird Algorithm
-
 #include<bits/stdc++.h>
 #define ll long long
 #define Ints vector<int>
@@ -22,24 +20,18 @@ void FastI()
 #endif
 }
 
+
+
 void solve() {
-	long long n;
+	ll n;
 	cin >> n;
-	cout << n << " ";
-	while (n != 1) {
-		if (n % 2 == 0) {
-
-			cout << n / 2 << " ";
-			n = n / 2;
-		}
-		else {
-
-			cout << n * 3 + 1 << " ";
-			n = n * 3 + 1;
-		}
-
+	ll sum = n * (n + 1) / 2;
+	ll a, total = 0;
+	for (int i = 0; i < n - 1; i++) {
+		cin >> a;
+		total += a;
 	}
-
+	cout << (sum - total) << endl ;
 }
 
 int main() {
