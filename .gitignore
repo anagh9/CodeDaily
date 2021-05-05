@@ -6,6 +6,9 @@
 *.exe
 *.o
 *.so
+test*
+
+
 
 # Packages #
 ############
@@ -39,4 +42,4 @@ Thumbs.db
 input.txt
 output.txt
 t1.cpp
-text.cpp
+test.cpp

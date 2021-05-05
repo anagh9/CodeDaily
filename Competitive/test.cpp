@@ -1,8 +1,17 @@
 #include<bits/stdc++.h>
+#define ll long long
+#define Ints vector<int>
+#define pb push_back
+#define mp make_pair
+#define fo(i,a,b) for(int i = a; i <b; i++)
+#define fv(it,a)  for(auto it = a.begin() ; it!=a.end(); it++)
+#define deb(x) cout<<#x<<" "<<x<<endl;
+#define PI 3.1415926535897932384626
 using namespace std;
-#include "4.cpp"
+const int mod = 1000000007;
+const int N = 3e5, M = N;
 
-void c_p_c()
+void FastI()
 {
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 #ifndef ONLINE_JUDGE
@@ -11,25 +20,19 @@ void c_p_c()
 #endif
 }
 
+void solve() {
+	int n;
+	// cin>>n;
 
+}
 
 int main() {
-	c_p_c();
-
-	BinaryTree<int> obj;
-	obj.insert(10);
-	obj.insert(8);
-	obj.insert(6);
-	obj.insert(4);
-	obj.insert(2);
-	std::cout << "\n--------------------------------------------------\n";
-	std::cout << "---------------Displaying Tree Contents---------------";
-	std::cout << "\n--------------------------------------------------\n";
-	obj.printInorder();
-	std::cout << std::endl;
-	obj.printPreorder();
-	std::cout << std::endl;
-	obj.printPostorder();
-	// b.inorder(root);
+	FastI();
+	int t;
+	// cin >> t;
+	// while (t--) {
+	// solve();
+	// }
+	cout << "Hello";
 	return 0;
 }
