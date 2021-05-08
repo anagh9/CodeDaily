@@ -1,24 +1,23 @@
-// C++ program to demonstrate working of regex_match()
-#include <iostream>
-#include <regex>
-
+#include<bits/stdc++.h>
+#define ll long long
+#define Ints vector<int>
+#define pb push_back
+#define mp make_pair
+#define fo(i,a,b) for(int i = a; i <b; i++)
+#define fv(it,a)  for(auto it = a.begin() ; it!=a.end(); it++)
+#define PI 3.1415926535897932384626
 using namespace std;
-int main()
+const int mod = 1000000007;
+const int N = 3e5, M = N;
+#include"./basics/0.GenralLib.cpp"
+
+void FastI()
 {
-	string a = "GeeksForGeeks";
-
-	// Here b is an object of regex (regular expression)
-	regex b("(Geek)(.*)"); // Geeks followed by any character
-
-	// regex_match function matches string a against regex b
-	if ( regex_match(a, b) )
-		cout << "String 'a' matches regular expression 'b' \n";
-
-	// regex_match function for matching a range in string
-	// against regex b
-	if ( regex_match(a.begin(), a.end(), b) )
-		cout << "String 'a' matches with regular expression "
-		     "'b' in the range from 0 to string end\n";
-
-	return 0;
+	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#ifndef ONLINE_JUDGE
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+#endif
 }
+
+

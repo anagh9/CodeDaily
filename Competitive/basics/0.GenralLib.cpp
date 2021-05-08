@@ -6,3 +6,6 @@ void Loop(std::vector<int> vect) {
 void deb(int x) {
 	std::cout << "#x :" << x << std::endl;
 }
+
+template <typename T>
+auto print(T n) {std::cout << n << std::endl;}
