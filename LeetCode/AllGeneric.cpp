@@ -1,13 +1,12 @@
+void Loop(std::vector<int> v) {
+	for (auto it : v)
+		std::cout << it << " ";
+}
 
-void loop()
-
-
-void TestCase() {
-	vector<int>nums {1, 2, 2, 3, 3};
-	vector<int>nums {1 , 1 , 1 , 1 , 3 , 1};
-	vector<int>nums {6 , 5, 4 , 4};
-	Function ? cout << "true" : cout << " false" << endl;
-	Function ? cout << "true" : cout << " false" << endl;
+void gLoop(std::vector<int> v, int n) {
+	for (int i = 0; i < n; i++) {
+		std::cout << v[i] << " ";
+	}
 }
 
 void RandomArray(int upperlimit, int size) {
@@ -15,10 +14,9 @@ void RandomArray(int upperlimit, int size) {
 	for (int i = 0; i < size; i++) {
 		x[i] = rand() % upperlimit;
 	}
-	cout << "{"
+	std::cout << "{";
 	for (int i = 0; i < size; i++) {
-		std::cout << i << "," << " ";
+		std::cout << x[i] << "," << " ";
 	}
-	cout << "}"
-
+	std::cout << "}";
 }
