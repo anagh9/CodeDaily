@@ -18,5 +18,9 @@
 
 
 ## Genral Problems and Learning
+<<<<<<< HEAD
 + [String Learning](LeetCode/StringLearning.h)
  
+=======
++ [String Learning](Leetcode/StringLearning.h)
+>>>>>>> 1e83abf3935ee54b6864855ce75afdf21bdb55fb
