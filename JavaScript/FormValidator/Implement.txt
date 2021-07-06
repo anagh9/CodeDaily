@@ -1,0 +1,13 @@
+small Tag
+
+Centering any Container
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+Function List
+
+checkEmail()
+checkLength()
+checkPasswordMatch()
+getFieldName()
