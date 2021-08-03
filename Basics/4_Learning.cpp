@@ -631,6 +631,28 @@ void printNByK(int arr[], int n, int k)
 	}
 }
 
+/* Using Map Find */
+void findUsage(){
+	map<int,string> mp; // Red Black Tree
+	m[1] ="abac", // O(log(n))
+	m[2] ="absc",
+	m[3] ="adbc",
+	m[4] ="abcf",
+	m[5] ="abfc",
+
+	auto it = mp.find(3); // It will points to 3 iterator if not exists if will points to map.end : O(log(n))
+
+	if(it==mp.end()){
+		cout<<"No Value";
+	}else{
+		cout<< (*it).first<<" "<<(*it).second;
+	}
+
+	// For Erasing : O(log(n))
+	if(it!=m.end())
+		mp.erase(it) // It will delete m[3] 
+
+}
 
 
 

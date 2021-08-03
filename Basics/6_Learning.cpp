@@ -2,6 +2,8 @@
 
 /* INtroduction to String */
 
+/*COUNT FREQUENCY OF EVERY CHAR IN STRING*/
+
 main()
 {
 	string str = "geeksforgeeks";

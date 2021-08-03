@@ -1374,9 +1374,56 @@ int main()
 	return 0;
 }
 
+/****************** Addition Of Two Matrix ****************/
 
 
+vector<vector<int>> matrixSum(vector<vector<int>>&A , vector<vector<int>> &B){
+	int n = A.size(); 
+	int m = A[0].size(); 
 
+	vector<vector<int> > res(n,vector<int> (m,0));
+
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			res[i][j] = A[i][j]+B[i][j];
+		}
+	}
+	return res;
+}
+
+main(){
+	vector<vector<int>> A{
+		{1,2,3},
+		{3,4,5},
+		{7,8,9}
+	};
+	vector<vector<int>> B{
+		{1,2,3},
+		{3,4,5},
+		{7,8,9}
+	};
+
+
+	auto matrix = matrixSum(A,B);
+	// Printing Matrix Which is returned By Function
+	for(vector<int> v1:matrix){
+		for(int x:v1){
+			cout<<x<<" ";
+		}
+		cout<<endl;
+	}
+
+	// Printing Matrix Which is returned By Function Another Method
+	for(auto it:matrix){
+		for(auto y:it){
+			cout<<y<<" ";
+		}
+		cout<<endl;
+	}
+
+}
+
+/******************X Addition Of Two Matrix X****************/
 
 
 

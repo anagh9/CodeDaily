@@ -1,0 +1,68 @@
+-- https://www.hackerrank.com/challenges/salary-of-employees/problem?h_r=next-challenge&h_v=zen
+
+Select name from employee where salary > 2000 and months < 10 order by employee_id asc;
+
+Learning :
+For Selecting by id in sorting order Use
+
+SELECT expressions
+FROM tables
+[WHERE conditions]
+ORDER BY expression [ ASC | DESC ];
+
+// ---------------------------------------------------------
+
+# Selecting any double value with specific decimal places
+# MySQL TRUNCATE() returns a number after truncated to certain decimal places. The number and the number of decimal places are specified as arguments of the TRUNCATE function
+
+SELECT TRUNCATE(2.465,1);
+-- Output : 2.4
+
+// ---------------------------------------------------------
+
+# Selecting Maximum No among any table and Min
+
+Select max(amount) from tableName;
+Select min(amount) from tableName;
+
+SELECT MAX(DISTINCT aggregate_expression)    
+FROM table_name(s)    
+[WHERE conditions]; 
+
+// ---------------------------------------------------------
+ # Using Round for rounding and using select two times
+
+SELECT ROUND(LONG_W,4)
+FROM STATION
+WHERE LAT_N = (SELECT MAX(LAT_N) FROM STATION WHERE LAT_N < 137.2345);
+
+//----------------------------------------------------------
+# For mod we use abs(a-b) and use as for assigning value
+
+SELECT ROUND(ABS(A - C) + ABS(B - D), 4)
+FROM (
+        SELECT MAX(LAT_N) AS A, MIN(LAT_N) AS B , MAX(LONG_W) AS C , MIN(LONG_W) AS D
+        FROM STATION
+    ) ;
+
+//--------------------------------------------
+
+Using Count Aggregation
+    
+SELECT COUNT(ID) FROM CITY WHERE POPULATION > 100000;
+
+//--------------------------------------------
+https://www.hackerrank.com/challenges/what-type-of-triangle/problem
+
+-- Traingle Problem
+
+SELECT CASE             
+            WHEN A + B > C AND B + C > A AND A + C > B THEN
+                CASE 
+                    WHEN A = B AND B = C THEN 'Equilateral'
+                    WHEN A = B OR B = C OR A = C THEN 'Isosceles'
+                    ELSE 'Scalene'
+                END
+            ELSE 'Not A Triangle'
+        END
+FROM TRIANGLES;

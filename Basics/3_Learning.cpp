@@ -1,4 +1,5 @@
 /******************* Arrays All Operations *****************************************/
+
 /* Intersection of Two Array */
 
 vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
@@ -35,12 +36,11 @@ vector<int> intersect(vector<int>& a, vector<int>& b) {
 vector<int> intersect(vector<int>& a, vector<int>& b) {
 	sort(a.begin(), a.end());
 	sort(b.begin(), b.end());
-	a.erase(set_intersection(a.begin(), a.end(), b.begin(), b.end(), a.begin()), a.end());
+	a.erase(set_intersection(a.begin(), a.end(), b.begin(), b.end(), a.begin()));
 	return a;
 }
 
 /* Insertion In Array*/
-
 int insert(int arr[], int n, int x, int cap, int pos)
 {
 	if (n == cap)
@@ -224,7 +224,7 @@ void reverse(int arr[], int low, int high)
 		high--;
 	}
 }
-
+	
 
 void leftRotate(int arr[], int d, int n)
 {
